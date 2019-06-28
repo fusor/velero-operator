@@ -1,0 +1,7 @@
+apiVersion: migration.openshift.io/v1alpha1
+kind: VeleroController
+metadata:
+  name: example-velerocontroller
+spec:
+  # Add fields here
+  size: 3

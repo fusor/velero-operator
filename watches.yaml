@@ -1,0 +1,5 @@
+---
+- version: v1alpha1
+  group: migration.openshift.io
+  kind: VeleroController
+  role: /opt/ansible/roles/velerocontroller
