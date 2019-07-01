@@ -1,4 +1,4 @@
-## mig-operator
+# velero-operator
 
 ## Operator Installation
 `oc create -f operator.yml`
