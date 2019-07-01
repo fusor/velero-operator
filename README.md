@@ -16,12 +16,7 @@ To use velero standalone you must set up coordinates for a backup storage locati
 1. Edit controller.yml
 1. Adjust `restic_pv_host_path` for the version of Openshift you are using.
 1. Change `standalone` to `true`
-1. Set up coordinates for an s3 bucket. ```
-  aws_bucket_name:
-  aws_key_id:
-  aws_region:
-  aws_secret_access_key:
-```
+1. Set up coordinates for an s3 bucket using  `aws_bucket_name`, `aws_key_id`, `aws_region`, and `aws_secret_access_key`.
 1. If you want to use noobaa instead of AWS  use the same keys, and also set `noobaa` to `true`, and set `noobaa_service_url`.
 1. `oc create -f controller.yml`
 
