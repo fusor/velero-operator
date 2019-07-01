@@ -1,4 +1,12 @@
 ---
+- name: Check if cloud-credentials secret exists already so we don't update it
+  k8s_facts:
+    api_version: v1
+    kind: Secret
+    name: "{{ aws_secret_name }}"
+    namespace: "{{ velero_namespace }}"
+  register: secret_status
+
 - name: "S3 secret"
   k8s:
     state: present
@@ -10,6 +18,7 @@
         namespace: "{{ velero_namespace }}"
       data:
         cloud: "{{ lookup('template', 's3-secret.j2') | b64encode }}"
+  when: (secret_status.resources|length) == 0
 
 - name: "Set up velero controller"
   k8s:

@@ -15,3 +15,4 @@ spec:
   restic_pv_host_path: /var/lib/kubelet/pods
   #Openshift 3:
   #restic_pv_host_path: /var/lib/origin/openshift.local.volumes/pods
+  standalone: false
