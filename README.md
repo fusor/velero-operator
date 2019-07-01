@@ -11,7 +11,7 @@
 1. `oc create -f controller.yml`
 
 ### Standalone
-To use velero standalone you must set up coordinates for a backup storage location. This does not prevent also using velero for migrations.
+To use velero standalone set up a backup storage location. This does not prevent also using velero for migrations.
 
 1. Edit controller.yml
 1. Adjust `restic_pv_host_path` for the version of Openshift you are using.
