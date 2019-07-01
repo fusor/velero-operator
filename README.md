@@ -12,9 +12,9 @@ Edit controller.yml to set at a minimum:
   aws_secret_access_key:
 ```
 
-If you want to use noobaa you may use the same keys for credentials, set noobaa to true, and set noobaa_service_url.
+If you want to use noobaa you may use the same keys for credentials, set `noobaa` to `true`, and set `noobaa_service_url`.
 
-restic_pv_host_path will need to be configured for Openshift 3 or 4.
+`restic_pv_host_path` will need to be configured for Openshift 3 or 4.
 
 `oc create -f controller.yml`
 
