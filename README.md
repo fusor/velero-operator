@@ -5,7 +5,7 @@
 
 ## Velero Controller Installation
 
-### For use only with [mig-operator](https://github.com/fusor/mig-operator)/[mig-controller](https://github.com/fusor/mig-controller)/[mig-ui](https://github.com/fusor/mig-controller)
+### For use only with [mig-operator](https://github.com/fusor/mig-operator)/[mig-controller](https://github.com/fusor/mig-controller)/[mig-ui](https://github.com/fusor/mig-ui)
 1. Edit controller.yml
 1. Adjust `restic_pv_host_path` for the version of Openshift you are using
 1. `oc create -f controller.yml`
