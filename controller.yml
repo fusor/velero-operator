@@ -1,0 +1,17 @@
+apiVersion: migration.openshift.io/v1alpha1
+kind: VeleroController
+metadata:
+  name: velero-controller
+  namespace: velero
+spec:
+  aws_bucket_name:
+  aws_key_id:
+  aws_region:
+  aws_secret_access_key:
+  aws_key_prefix: velero
+  noobaa: false
+  noobaa_service_url: aws.noobaa.svc.cluster.local
+  #Openshift 4:
+  restic_pv_host_path: /var/lib/kubelet/pods
+  #Openshift 3:
+  #restic_pv_host_path: /var/lib/origin/openshift.local.volumes/pods

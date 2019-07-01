@@ -1,2 +1,17 @@
 ---
-# tasks file for velerocontroller
+- name: "S3 secret"
+  k8s:
+    state: present
+    definition:
+      apiVersion: v1
+      kind: Secret
+      metadata:
+        name: "{{ aws_secret_name }}"
+        namespace: "{{ velero_namespace }}"
+      data:
+        cloud: "{{ lookup('template', 's3-secret.j2') | b64encode }}"
+
+- name: "Set up velero controller"
+  k8s:
+    state: "present"
+    definition: "{{ lookup('template', 'manifest.yml.j2') }}"

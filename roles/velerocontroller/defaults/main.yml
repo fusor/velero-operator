@@ -1,2 +1,6 @@
 ---
-# defaults file for velerocontroller
+aws_secret_name: cloud-credentials
+velero_bsl_name: default
+velero_image: quay.io/ocpmigrate/velero:fusor-dev
+velero_namespace: velero
+velero_plugin_image: quay.io/ocpmigrate/velero-plugin:latest
